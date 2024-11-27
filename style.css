@@ -28,7 +28,7 @@ body {
 .title-block h1 {
   font-family: 'Georgia', serif; /* 标题字体 */
   margin: 0; /* 清除默认外边距 */
-  font-size: 24px; /* 标题大小 */
+  font-size: 32px; /* 增大标题字体 */
 }
 
 /* 段落样式 */
@@ -44,8 +44,8 @@ p {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  color: #fff;
-  background-color: #0056b3;
+  color: #333; /* 文字颜色 */
+  background-color: #f0f0f0; /* 浅灰色背景 */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -53,7 +53,7 @@ p {
 }
 
 .button:hover {
-  background-color: #004080;
+  background-color: #d0d0d0; /* 悬停时更深的灰色 */
 }
 
 /* 分割线样式 */
