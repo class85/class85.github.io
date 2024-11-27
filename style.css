@@ -16,7 +16,7 @@ body {
 
 /* 标题模块样式 */
 .title-block {
-  background-color: #b1f4fc; /* 稍微深一点的蓝色填充 */
+  background-color: #a1caf1; /* 稍微深一点的蓝色填充 */
   padding: 20px; /* 内边距 */
   margin-bottom: 20px; /* 模块间的间距 */
   border-radius: 8px; /* 圆角 */
@@ -34,6 +34,14 @@ body {
 /* 段落样式 */
 p {
   margin-bottom: 20px; /* 底部外边距 */
+}
+
+/* 图片样式 */
+.title-block img {
+  width: 100%; /* 图片宽度与 .title-block 一致 */
+  border-radius: 8px; /* 圆角 */
+  display: block; /* 确保图片独占一行 */
+  margin-top: 20px; /* 图片与标题之间的间距 */
 }
 
 /* 按钮样式 */
