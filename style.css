@@ -1,0 +1,61 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 身体部分的基本样式 */
+  body {
+    font-family: 'Arial', sans-serif; /* 字体 */
+    line-height: 1.6; /* 行高 */
+    color: #333; /* 文字颜色 */
+    background-color: #f4f4f4; /* 背景颜色 */
+    padding: 20px; /* 内边距 */
+  }
+  
+  /* 标题样式 */
+  h1, h2 {
+    color: #0056b3; /* 更深的颜色 */
+    margin-bottom: 10px; /* 底部外边距 */
+  }
+  
+  /* 段落样式 */
+  p {
+    margin-bottom: 20px; /* 底部外边距 */
+  }
+  
+  /* 链接样式 */
+  a {
+    color: #007bff; /* 默认颜色 */
+    text-decoration: none; /* 移除下划线 */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+  }
+  
+  /* 分割线样式 */
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+  }
+  
+  /* 容器样式，用于控制整体布局 */
+  .container {
+    max-width: 800px; /* 最大宽度 */
+    margin: 0 auto; /* 居中对齐 */
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  }
+  
+  /* 示例使用容器包裹所有内容 */
+  body {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    min-height: 100vh; /* 最小高度为视窗高度 */
+  }
