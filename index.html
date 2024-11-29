@@ -1,45 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>BBSZ 8.5</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBSZ 8.5 User Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="container">
-      <div class="title-block">
-        <h1>Announcements</h1>
-      </div>
-      <div class="content">
-        <p>This website is for shared files and information. This website is only for students in 8.5. Please do not share with other students. If you feel like any change is needed, please contact the class captains</p>
-      </div>
-      
-      <div class="title-block">
-        <h1>Homework</h1>
-        <a href="nov25-29.png" target="_blank">
-          <img src="nov25-29.png" alt="This picture failed to load. Contact class captains or check the Wechat group.">
-        </a>
-      </div>
-      
-      <div class="content">
-        <h2>Past Homework Files</h2>
-        <a href="oct14-18.pdf" class="button">Week October 14 - 18 Homework Document</a>
-        <a href="oct21-25.pdf" class="button">Week October 25 - 25 Homework Document</a>
-        <a href="oct28-nov01.pdf" class="button">Week October 28 - November 01 Homework Document</a>
-        <a href="nov04-08.pdf" class="button">Week November 04 - 08 Homework Document</a>
-        <a href="nov11-15.pdf" class="button">Week November 11 - 15 Homework Document</a>
-        <a href="nov18-22.pdf" class="button">Week November 11 - 22 Homework Document</a>
-      </div>
-      
-      <div class="title-block">
-        <h1>Test</h1>
-      </div>
-      <div class="content">
-        <h2>Current Test File</h2>
-        <p>Insert pic</p>
-        
-        <h2>Past Test Files</h2>
-        <p>Insert file buttons</p>
-      </div>
+        <div class="title-block">
+            <h1>User Login</h1>
+        </div>
+
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="email">Email or Username: </label>
+                <input type="text" id="email" name="email" class="button" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" class="button" required>
+            </div>
+
+            <button type="submit" class="button login-button">Login</button>
+        </form>
     </div>
-  </body>
-</html>
+
+    <script>
+        // User database
+        const users = [
+            { username: 'demo', email: 'demo@qq.com', password: 'demo' },
+            { username: 'admin', email: 'admin@qq.com', password: 'admin' },
+            { username: 'Amy Yuan', email: 'ziqian.yuan71326-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Andy Pan', email: 'haoze.pan90491-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Carol Qin', email: 'yiyang.qin602423-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Emily Yuan', email: 'jiayi.yuan602319-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Estrella Chen', email: 'jiayi.chen602988-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Franklin Wu', email: 'franklin.wu16067-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Hannah Dong', email: 'yuhan.dong15634-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Harry Liu', email: 'haoyi.liu90461-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Jennie Fan', email: 'jingyi.fan602385-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Kitty Zhao', email: 'jiamu.zhao90484-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Leo Chen', email: 'lihong.chen602450-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Mason Lou', email: 'zhifan.lou602710-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Matthew Hao', email: 'shijie.hao90449-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Mike Huang', email: 'yuanyuan.wan90401-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Muxi Yao', email: 'muxi.yao90476-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Nickie Cui', email: 'nickie.cui15621-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Ray Zhao', email: 'xinrui.zhao602589-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Rosa Zong', email: 'ruoheng.zong90486-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Ruby Wang', email: 'borui.wang15885-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Selina Deng', email: 'xiaoqin.deng15625-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Sheldon Chen', email: 'yushu.chen90436-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Sammy Liu', email: 'weiyi.liu602388-bbsz@basischina.com', password: 'BBSZ85' },
+            { username: 'Season Xu', email: 'ziyang.xu602322-bbsz@basischina.com', password: 'BBSZ85' }
+        ];
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailOrUsername = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // 查找匹配的用户
+            const matchedUser = users.find(u => 
+                (u.email === emailOrUsername || u.username === emailOrUsername) && 
+                u.password === password
+            );
+
+            if (matchedUser) {
+                // 登录成功
+                localStorage.setItem('currentUser', JSON.stringify(matchedUser));
+                alert(`Welcome Back, ${matchedUser.username}!`);
+                window.location.href = "access.html";
+            } else {
+                // 登录失败
+                window.location.href = "deny.html";
+            }
+        });
+    </script>
+</body>
+</html> 
